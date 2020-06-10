@@ -49,6 +49,21 @@ arr.map(item => {
       num = num + 1
     }
   })
+  arr2.push({item: item, num : num})
+})
+var max = Math.max.apply(Math, arr2.map(item => { return item.num }))
+arr2.map(item => {
+  if(item.num == max) {
+    console.log(item.item)
+  }
+})
+/* arr.map(item => {
+  var num = 0
+  a.map(item2 => {
+    if(item2 == item) {
+      num = num + 1
+    }
+  })
   arr2.push(num)
 })
 var max;
@@ -59,4 +74,4 @@ arr2.map(item => {
     max = item
   }
 })
-console.log(arr[arr2.indexOf(max)])
+console.log(arr[arr2.indexOf(max)]) */
